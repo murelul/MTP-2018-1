@@ -148,7 +148,7 @@ int main(){
 			break;
 		case 8: DecOct();
 			break;
-		default: printf("\n\nOpção não aceita, digite alguma opção do menu acima.");
+		default: printf("\n\nOpÃ§Ã£o nÃ£o aceita, digite alguma opÃ§Ã£o do menu acima.");
 	}
 return 0;
 }
