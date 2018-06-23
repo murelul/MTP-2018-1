@@ -1,7 +1,7 @@
 //11721EBI026 Marcela Castellani
 
 #include <stdio.h>
-int s(int num[], int qtd){
+int s(int n	[], int qtd){
 	int s=0, i;
     for(i=0; i<qtd; i++){
     	s=s+n[i];
@@ -20,7 +20,7 @@ int main(){
 	getchar();
 	do{
 		printf("\nNum[%d]: ", i+1);
-		scanf("%d", &num[i]);
+		scanf("%d", &n[i]);
 		getchar();
 		i++;
 	}while(i<qtd);
