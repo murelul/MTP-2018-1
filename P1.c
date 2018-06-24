@@ -6,7 +6,8 @@ int main(){
 	int estado=0, i;
 	char seq[256];
 	printf("\nDigite a sequencia: ");
-	scanf("%s", &seq);
+	scanf("%s", seq);
+	getchar();
 
 for(i=0; seq[i]!= '\0'; i++){
 	if(estado==0 && seq[i]== '0'){
