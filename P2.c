@@ -1,11 +1,14 @@
 //Marcela Castellani 11721EBI026
 
 
+#include <stdio.h>
+
 void BinDec(){
-   int i=0,j=0,k, mult=1, bin[256], s=0;
+   int i=0,j=0,k, mult=1, bin[256], soma=0;
 	char binario[256];
 	printf("\nDigite um numero a ser convertido: ");
-	scanf("%s", &binario);
+	scanf("%s", binario);
+	getchar();
 	for(i=0; binario[i]!='\0'; i++);
 	i--;
 	k=i;
@@ -17,19 +20,20 @@ void BinDec(){
 
 	for(i;i>=0; i--){
 		for(k=0; k<j; k++){mult=mult*2;}
-		s=s + bin[i]*mult;
+		soma=soma + bin[i]*mult;
 		mult=1;
 		j++;
 }
     printf("\nO binario %s em decimal e: %d \n\n\n", binario,soma);
-    return 0;
 }
 
+
 void BinHex(){
-	int i=0,j=0,k, mult=1, bin[256], s=0;
+	int i=0,j=0,k, mult=1, bin[256], soma=0;
 	char binario[256];
 	printf("\nDigite um numero a ser convertido: ");
-	scanf("%s", &binario);
+	scanf("%s", binario);
+	getchar();
 	for(i=0; binario[i]!='\0'; i++);
 	i--;
 	k=i;
@@ -41,26 +45,26 @@ void BinHex(){
 
 	for(i;i>=0; i--){
 		for(k=0; k<j; k++){mult=mult*2;}
-		s=s + bin[i]*mult;
+		soma=soma + bin[i]*mult;
 		mult=1;
 		j++;
 }
     printf("\nO binario %s em hexadecimal e: %X \n\n\n", binario,soma);
-    return 0;
+    
 }
 	    
 void HexDec(){
  int hexadecimal;
     printf("\nDigite um numero a ser convertido: ");
         scanf("%x" ,&hexadecimal);
-        printf("O hexadecimal %x em decimal e: %d" ,hexadecimal);
-    return 0;
+        printf("O hexadecimal %x em decimal e: %d" ,hexadecimal, hexadecimal);
+    
 }	
 
 void HexBin(){
 int hexadecimal,i,q[80],r[80];
 i=0;
-printf("Digite o numero para converter: ");
+printf("Digite o numero a ser convertido: ");
 scanf("%d", &hexadecimal);
 printf("%d em binarios: ",hexadecimal);
 
@@ -78,7 +82,7 @@ i--;
    i--;
    }
 printf("\n");
-return(0);}
+}
 
 void DecBin(){
 int decimal,i,q[80],r[80];
@@ -101,14 +105,14 @@ i--;
    i--;
    }
 printf("\n");
-return(0);}
+}
 
 void DecHex(){
 	 int decimal;
-    printf("\n Informe um numero decimal: ");
+    printf("\n Informe um numero em decimal: ");
         scanf("%d" ,&decimal);
         printf("O decimal %d em hexadecimal e: %x" , decimal, decimal);
-    return 0;
+   
 }
 
 void OctDec(){
@@ -116,7 +120,7 @@ void OctDec(){
     printf("\n Informe um numero em octal: ");
         scanf("%o" ,&octal);
         printf("O octal %o em hexadecimal e: %x" , octal, octal);
-    return 0;
+    
 }
 
 void DecOct(){
@@ -124,12 +128,12 @@ int decimal;
     printf("\nDigite um numero a ser convertido: ");
         scanf("%d" ,&decimal);
         printf("O hexadecimal %d em octal e: %o" ,decimal,decimal);
-    return 0;
+    
 }
 
 int main(){
 	int opcao;
-	printf("\nConverter de: \n1-Binario para Decimal \n2-Binario para Hexadecimal \n3-Hexadecimal para Decimal \n4-Hexadecimal para Binario \n5-Decimal para Binario \n6-Decimal para Hexadecimal \n7-Octal para Decimal \n8-Decimal para Octal\n");
+	printf("\nVoce deseja conversao entre: \n1-Binario para Decimal \n2-Binario para Hexadecimal \n3-Hexadecimal para Decimal \n4-Hexadecimal para Binario \n5-Decimal para Binario \n6-Decimal para Hexadecimal \n7-Octal para Decimal \n8-Decimal para Octal\n");
 	scanf("%d", &opcao);
 	switch(opcao){
 		case 1: BinDec();
@@ -148,7 +152,7 @@ int main(){
 			break;
 		case 8: DecOct();
 			break;
-		default: printf("\n\nOpção não aceita, digite alguma opção do menu acima.");
+		default: printf("\n\nOpção Inválida!");
 	}
 return 0;
 }
